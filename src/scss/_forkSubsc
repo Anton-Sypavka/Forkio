@@ -1,0 +1,105 @@
+@import "variables";
+
+.footer {
+  grid-area: footer;
+}
+
+.center-white{
+  text-align: center;
+  color: $colorWhite;
+}
+.fork-subscription {
+  &__content{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+  &__container {
+    background: url(../img/fork-back.png) no-repeat;
+    background-size: cover;
+  }
+  &__content-item{
+    width: 257px;
+    margin: 18px 16px 18px 15px;
+    cursor: pointer;
+  }
+  &__title{
+    font-weight: 700;
+    font-size: $forkSubscriptionTitleFont;
+    padding: 14px 10px 16px 10px;
+  }
+  &__item{
+    &-title {
+      font-size: $forkSubscriptionItemTitleFont;
+      text-transform: uppercase;
+      padding: 36px 0;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.06);
+      mix-blend-mode: normal;
+    }
+    &-content{
+      background-color: rgba(255,255,255,.11);
+      text-align: center;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      height: 361px;
+      justify-content: space-between;
+    }
+  }
+}
+.item__price-container{
+  position: relative;
+}
+.item__content{
+  &-price{
+    font-size: $forkSubscriptionItemPriceFont;
+    text-transform: uppercase;
+    padding: 15px 0 10px;;
+  }
+  &-text-top{
+    font-size: $forkSubscriptionItemTextTopFont;
+    text-transform: uppercase;
+    position: relative;
+  }
+  &-text-top::after{
+    display: block;
+    content: '';
+    position: absolute;
+    top: 87px;
+    right: 20%;
+    border-bottom: 5px solid $cardLineColor;
+    width: 60px;
+  }
+  &-text-bottom{
+    font-size: $forkSubscriptionItemTextBottomFont;
+    padding-bottom: 10px;
+  }
+}
+.item__button{
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.15);
+  mix-blend-mode: normal;
+  padding: 15px 38px;
+  font-size: $forkSubscriptionItemButtonTextFont;
+  text-transform: uppercase;
+  border-color: transparent;
+  border-radius: 30px;
+  margin-bottom: 30px;
+}
+.fork-subscription__item{
+  &-title-active{
+    background-color: $activeCardTitle;
+    padding: 43px 0;
+  }
+  &-content-active{
+    background-color: $activeCardBack;
+    height: 449px;
+  }
+}
+.fork-subscription__content-item-active{
+  width: 299px;
+  margin: 18px 11px;
+}
+
+@import "media";

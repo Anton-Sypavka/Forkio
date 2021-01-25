@@ -1,0 +1,298 @@
+/* Tablet */
+
+@media screen and (min-width: $tabletSize) {
+  .nav {
+    &__container {
+      align-items: flex-start;
+      justify-content: space-between;
+      padding: 22px 10px 55px;
+    }
+
+    &__list {
+      @include flex-row;
+      width: 100%;
+      position: absolute;
+      top: 83px;
+      left: 50%;
+      transform: translate(-50%);
+    }
+
+    &__item {
+      display: inline-block;
+      background: none;
+      border: none;
+      padding: 0 10px;
+      width: auto;
+    }
+
+    &__link {
+      @include nav-bar-font;
+      &:hover {
+        color: $colorWhite;
+        &::before {
+          display: none;
+        }
+      }
+    }
+
+    &__bar {
+      display: none;
+    }
+  }
+  .logo {
+    &__text {
+      display: inline-block;
+    }
+  }
+  .button {
+    &--small-purple {
+      padding: 11px 35px;
+      font-size: $buttonSmallFontTablet;
+    }
+
+    &--large-purple {
+      padding: 19px 74px;
+      font-size: $buttonLargeFontTablet;
+      bottom: -31px;
+    }
+  }
+  .header {
+    &__container {
+      background-position: bottom;
+      padding: 10% 10px 50%;
+    }
+
+    &__title {
+      font-size: $headerTitleFontTablet;
+    }
+
+    &__slogan {
+      font-size: $headerSloganFontTablet;
+    }
+
+    &__text {
+      margin-top: 19px;
+    }
+    &__trial-proposition {
+      bottom: -10%;
+    }
+    .revolutionary-editor__container-text{
+      margin-bottom: 24px;
+    }
+
+    /** Here is what you get **/
+    .content__container-item {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .content__item-text {
+      text-align: left;
+      width: 390px;
+    }
+
+    .here-is-what-you-get__section-title {
+      padding: 61px 0 41px;
+    }
+  }
+
+  .people-are-talking__container {
+    grid-template-rows: repeat(5, 0fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 'heading heading'
+    'smashing codrops'
+    'doubleU pixel-buddha'
+    'creative-bloq tnw'
+    'footer footer';
+    align-items: end;
+    grid-row-gap: 55px;
+    grid-column-gap: 63px;
+  }
+  .people-are-talking {
+    &__footer {
+      padding: 10px 0;
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+
+  .content__container-item {
+      display: flex;
+      justify-content: space-evenly;
+      margin-bottom: 61px;
+    }
+  .content__item-text{
+    text-align: left;
+    width: 390px;
+  }
+  .here-is-what-you-get__section-title {
+    padding: 61px 0 41px;
+  }
+  .item__content-text-top:after{
+    top: 13vh;
+    right: 23%;
+  }
+  .fork-subscription{
+    &__title{
+      padding: 88px 0 39px 0;
+    }
+    &__container{
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+    }
+
+    &__item-content{
+      height: 300px;
+
+      &-active{
+        height: 400px;
+      }
+
+    }
+    &__content {
+      flex-wrap: wrap;
+      justify-content: center;
+      flex-flow: wrap;
+      padding-bottom: 94px;
+      width: 481px;
+
+      &-item{
+        margin: 18px 0 0 15px;
+        width: 200px;
+      }
+
+      &-item-active{
+        width: 230px;
+      }
+    }
+  }
+  .icon__container{
+    padding-bottom: 98px;
+  }
+}
+
+/*Desktop*/
+
+@media screen and (min-width: $desktopSize) {
+  .nav {
+    &__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      background-color: #000000;
+      padding: 29px 10px 0;
+    }
+
+    &__list {
+      position: static;
+      display: inline-block;
+      transform: translate(0);
+      width: auto;
+      margin-left: 200px;
+    }
+
+    &__item {
+      display: inline-block;
+    }
+  }
+
+  .header {
+    &__trial-proposition {
+      bottom: -7%
+    }
+  }
+
+  .icon__container{
+    padding-bottom: 70px;
+  }
+  .here-is-what-you-get__container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "content title" "content image" "content image" "content image";
+    background-color: $hereIsWhatYouGet_back;
+    padding-top: 98px;
+  }
+  .here-is-what-you-get__section-title {
+    align-self: center;
+    font-size: $hereIsWhatYouGetTitleFontDesktop;
+    padding: 0;
+  }
+  .here-is-what-you-get__section-image img{
+    width: auto;
+  }
+  .revolutionary-editor__container-text{
+    margin-bottom: 18px;
+  }
+  .people-are-talking__container {
+    grid-template-rows: repeat(4, 0fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 'heading heading heading'
+    'smashing codrops doubleU'
+    'pixel-buddha creative-bloq tnw'
+    'footer footer footer';
+    align-items: end;
+    grid-row-gap: 100px;
+    grid-column-gap: 90px;
+  }
+
+  .people-are-talking {
+    &__footer {
+      padding: 10px 0;
+      width: 70%;
+      margin: 0 auto;
+    }
+  }
+
+  .content__container-item{
+    display: flex;
+    margin-bottom: 35px;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .content__item-text{
+    width: 500px;
+  }
+  .section-heading {
+    @include section-heading;
+    font-size: $peopleAreTalkingTitleFontDesktop;
+  }
+  .item__content-text-top:after{
+    top: 87px;
+    right: 20%;
+  }
+  .fork-subscription {
+    &__content {
+      justify-content: space-between;
+      flex-flow: row;
+      padding-bottom: 94px;
+      width: 1185px;
+      &-item{
+        width: 257px;
+        margin: 18px 16px 18px 15px;
+      }
+      &-item-active{
+        width: 299px;
+        margin: 18px 11px;
+      }
+    }
+    &__title{
+      padding-bottom: 61px;
+    }
+    &__container{
+      @include flex-row;
+    }
+    &__item-content{
+      height: 361px;
+
+      &-active{
+        height: 449px;
+      }
+    }
+  }
+}
+
+
+
+
+
+

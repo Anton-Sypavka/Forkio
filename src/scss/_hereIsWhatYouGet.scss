@@ -1,0 +1,58 @@
+@import "variables";
+
+.here-is-what-you-get{
+  background-color: $hereIsWhatYouGet_back;
+  grid-area: hereIsWhatYouGet;
+  }
+.here-is-what-you-get__container{
+  padding: 0 10px;
+  display: grid;
+  grid-template-areas: "title" "content" "image";
+  justify-items: center;
+  background-color: $hereIsWhatYouGet_back780px;
+  }
+.here-is-what-you-get__section-title{
+  grid-area: title;
+  padding: 32px 0 36px;
+  text-align: center;
+  font-size: $hereIsWhatYouGetTitleFont;
+  font-weight: bold;
+  align-items: center;
+  color: $hereIsWhatYouGet_title;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.here-is-what-you-get__section-content{
+  grid-area: content;
+}
+.here-is-what-you-get__section-image {
+  grid-area: image;
+  width: 100%;
+  &-item{
+  width: 100%;
+  }
+}
+.item-title{
+  font-size: $hereIsWhatYouGetItemFont;
+  color: $hereIsWhatYouGet_item-title;
+  margin-bottom: 17px;
+}
+.item-text{
+  font-size: $hereIsWhatYouGetTextFont;
+  color: $hereIsWhatYouGet_item-text;
+}
+.item-img{
+  color: $hereIsWhatYouGet_title;
+}
+.content__container-item{
+  display: block;
+  text-align: center;
+  margin-bottom: 40px;
+  cursor: pointer;
+}
+
+.content__item-text{
+  width: 320px;
+}
+
+@import "media";
